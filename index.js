@@ -22,7 +22,7 @@ currentSnake.forEach(index => squares[index].classList.add('snake'))
 
 function move() {
   if (
-    (currentSnake[0] + width >= 100 && direction === width) ||
+    (currentSnake[0] + width >= width * width && direction === width) ||
     (currentSnake[0] % width === 9 && direction === 1) ||
     (currentSnake[0] % width === 0 && direction === -1) ||
     (currentSnake[0] - width < 0 && direction === -width) ||
@@ -34,6 +34,13 @@ function move() {
   const tail = currentSnake.pop()
   squares[tail].classList.remove("snake")
   currentSnake.unshift(currentSnake[0] + direction)
+
+  if (squares[currentSnake[0]].classList.contains("apple")) {
+    squares[currentSnake[0]].classList.remove("apple")
+
+  }
+
+
   squares[currentSnake[0]].classList.add("snake")
 
 }
