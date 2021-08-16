@@ -30,9 +30,6 @@ function move() {
   )
     return clearInterval(timerId)
 
-
-
-
   const tail = currentSnake.pop()
   squares[tail].classList.remove("snake")
   currentSnake.unshift(currentSnake[0] + direction)
@@ -42,6 +39,13 @@ function move() {
 move()
 
 let timerId = setInterval(move, 1000)
+
+function generateApples() {
+  do {
+
+  } while (squares[appleIndex].classList.contains("snake"))
+  squares[appleIndex].classList.add('apple')
+}
 
 function control(e) {
   if (e.keyCode === 38) {
