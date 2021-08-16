@@ -7,6 +7,12 @@ let direction = 1
 let width = 10
 let appleIndex = 0
 let score = 0
+let intervalTime = 1000
+let speed = 0.9
+
+
+
+
 
 function createGrid() {
   for (let i = 0; i < 100; i++) {
@@ -19,7 +25,15 @@ function createGrid() {
 }
 createGrid()
 
+
+
+
+
 currentSnake.forEach(index => squares[index].classList.add('snake'))
+
+
+
+
 
 function move() {
   if (
@@ -43,18 +57,21 @@ function move() {
     generateApples()
     score++
     scoreDisplay.textContent = score
-
-
-
+    clearInterval(timerId)
+    intervalTime = intervalTime * speed
+    timerId = setInterval(move, intervalTime)
   }
-
-
   squares[currentSnake[0]].classList.add("snake")
-
 }
 move()
 
+
+
 let timerId = setInterval(move, 1000)
+
+
+
+
 
 function generateApples() {
   do {
