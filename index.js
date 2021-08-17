@@ -1,5 +1,5 @@
 const grid = document.querySelector(".grid")
-const start = document.getElementById("start")
+const startBtn = document.getElementById("start")
 const scoreDisplay = document.getElementById("score")
 let squares = []
 let currentSnake = [2, 1, 0]
@@ -9,6 +9,7 @@ let appleIndex = 0
 let score = 0
 let intervalTime = 1000
 let speed = 0.7
+let timerId = 0
 
 
 
@@ -30,6 +31,23 @@ createGrid()
 
 
 currentSnake.forEach(index => squares[index].classList.add('snake'))
+
+function startGame() {
+  currentSnake.forEach(index => squares[index].classList.remove("snake"))
+  squares[appleIndex].classList.remove("apple")
+  clearInterval(timerId)
+  currentSnake = [2, 1, 0]
+  score = 0
+  scoreDisplay.textContent = score
+  direction = 1
+  intervalTime = 1000
+  generateApples()
+  currentSnake.forEach(index => squares[index].classList.add("snake"))
+
+
+  timerId = setInterval(move, intervalTime)
+
+}
 
 
 
@@ -69,7 +87,6 @@ move()
 
 
 
-let timerId = setInterval(move, 1000)
 
 
 
@@ -95,3 +112,4 @@ function control(e) {
   }
 }
 document.addEventListener("keydown", control)
+startBtn.addEventListener("click", startGame)
