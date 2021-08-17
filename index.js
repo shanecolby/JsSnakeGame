@@ -8,7 +8,7 @@ let width = 10
 let appleIndex = 0
 let score = 0
 let intervalTime = 1000
-let speed = 0.9
+let speed = 0.7
 
 
 
@@ -42,10 +42,10 @@ function move() {
     (currentSnake[0] % width === 0 && direction === -1) ||
     (currentSnake[0] - width < 0 && direction === -width) ||
     squares[currentSnake[0] + direction].classList.contains("snake")
-
   )
     return clearInterval(timerId)
 
+  // initiates movement of the snake. removes last box and stlying and adds box to the end
   const tail = currentSnake.pop()
   squares[tail].classList.remove("snake")
   currentSnake.unshift(currentSnake[0] + direction)
