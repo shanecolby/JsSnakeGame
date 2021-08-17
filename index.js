@@ -2,13 +2,13 @@ const grid = document.querySelector(".grid")
 const startBtn = document.getElementById("start")
 const scoreDisplay = document.getElementById("score")
 let squares = []
-let currentSnake = [2, 1, 0]
+let currentSnake = [3, 2, 1, 0]
 let direction = 1
-let width = 10
+let width = 20
 let appleIndex = 0
 let score = 0
 let intervalTime = 1000
-let speed = 0.7
+let speed = 0.9
 let timerId = 0
 
 
@@ -16,7 +16,7 @@ let timerId = 0
 
 
 function createGrid() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 400; i++) {
     const square = document.createElement('div')
     square.classList.add('square')
     grid.appendChild(square)
@@ -36,7 +36,7 @@ function startGame() {
   currentSnake.forEach(index => squares[index].classList.remove("snake"))
   squares[appleIndex].classList.remove("apple")
   clearInterval(timerId)
-  currentSnake = [2, 1, 0]
+  currentSnake = [3, 2, 1, 0]
   score = 0
   scoreDisplay.textContent = score
   direction = 1
@@ -56,7 +56,7 @@ function startGame() {
 function move() {
   if (
     (currentSnake[0] + width >= width * width && direction === width) ||
-    (currentSnake[0] % width === 9 && direction === 1) ||
+    (currentSnake[0] % width === 19 && direction === 1) ||
     (currentSnake[0] % width === 0 && direction === -1) ||
     (currentSnake[0] - width < 0 && direction === -width) ||
     squares[currentSnake[0] + direction].classList.contains("snake")
