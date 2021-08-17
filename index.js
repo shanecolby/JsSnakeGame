@@ -43,7 +43,9 @@ function move() {
     (currentSnake[0] - width < 0 && direction === -width) ||
     squares[currentSnake[0] + direction].classList.contains("snake")
   )
-    return clearInterval(timerId)
+    return scoreDisplay.textContent = "You LOSE!", clearInterval(timerId)
+
+
 
   // initiates movement of the snake. removes last box and stlying and adds box to the end
   const tail = currentSnake.pop()
