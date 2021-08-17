@@ -1,4 +1,5 @@
 html, body {
+  font-family: 'Courier New', Courier, monospace;
   margin: 10;
   padding: 10;
 }
@@ -6,8 +7,8 @@ html, body {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border: solid 2px black;
 }
 
@@ -24,4 +25,20 @@ html, body {
 
 .apple {
   background-color: rgb(10, 160, 85);
+}
+
+#start {
+  background-color: green;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  transition-duration: 0.4s;
+
+}
+
+#start:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
