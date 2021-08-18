@@ -2,7 +2,6 @@ html, body {
   font-family: 'Courier New', Courier, monospace;
   margin: 10;
   padding: 10;
-  background-color: rgb(190, 190, 190);
   background-image: url('https://st.depositphotos.com/2400497/2917/v/600/depositphotos_29175525-stock-illustration-cartoon-snake.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,7 +13,7 @@ html, body {
   flex-wrap: wrap;
   width: 200px;
   height: 200px;
-  border: solid 2px black;
+  border: solid 2px rgb(244, 248, 1);
 }
 
 .square {
