@@ -2,6 +2,12 @@ html, body {
   font-family: 'Courier New', Courier, monospace;
   margin: 10;
   padding: 10;
+  background-color: rgb(190, 190, 190);
+  background-image: url('https://st.depositphotos.com/2400497/2917/v/600/depositphotos_29175525-stock-illustration-cartoon-snake.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
 }
 
 .grid {
@@ -32,6 +38,7 @@ html, body {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   font-size: 16px;
+  font-weight: 900;
   padding: 12px 28px;
   border: none;
   transition-duration: 0.4s;
