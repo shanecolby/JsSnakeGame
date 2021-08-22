@@ -3,21 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shanecolby/JsSnakeGame.git"
   },
-  "author": "",
+  "author": "\"Shane Colby\"",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shanecolby/JsSnakeGame/issues"
   },
-  "homepage": "https://github.com/shanecolby/JsSnakeGame#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/shanecolby/JsSnakeGame#readme"
 }
