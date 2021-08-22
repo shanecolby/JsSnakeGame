@@ -1,14 +1,16 @@
 html, body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: normal;
   font-family: 'Courier New', Courier, monospace;
   margin: 10;
   padding: 10;
-  background-image: url('https://st.depositphotos.com/2400497/2917/v/600/depositphotos_29175525-stock-illustration-cartoon-snake.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  background-color: rgb(131, 130, 130);
 }
 
 .grid {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   width: 200px;
@@ -27,7 +29,7 @@ html, body {
   
 }
 
-.apple {
+.apple { 
   background-color: rgb(10, 160, 85);
 }
 
@@ -45,5 +47,9 @@ html, body {
 
 #start:hover {
   background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#score {
   color: white;
 }
