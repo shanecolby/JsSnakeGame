@@ -22,18 +22,15 @@ function createGrid() {
     grid.appendChild(square)
     squares.push(square)
   }
-
 }
 createGrid()
-
-
-
-
 
 currentSnake.forEach(index => squares[index].classList.add('snake'))
 
 function startGame() {
+
   currentSnake.forEach(index => squares[index].classList.remove("snake"))
+
   squares[appleIndex].classList.remove("apple")
   clearInterval(timerId)
   currentSnake = [2, 1, 0]
@@ -44,13 +41,9 @@ function startGame() {
   generateApples()
   currentSnake.forEach(index => squares[index].classList.add("snake"))
 
-
   timerId = setInterval(move, intervalTime)
 
 }
-
-
-
 
 
 function move() {
@@ -62,8 +55,6 @@ function move() {
     squares[currentSnake[0] + direction].classList.contains("snake")
   )
     return scoreDisplay.textContent = "You LOSE!", clearInterval(timerId)
-
-
 
   // initiates movement of the snake. removes last box and stlying and adds box to the end
   const tail = currentSnake.pop()
@@ -86,12 +77,6 @@ function move() {
 move()
 
 
-
-
-
-
-
-
 function generateApples() {
   do {
     appleIndex = Math.floor(Math.random() * squares.length)
@@ -111,9 +96,6 @@ function control(e) {
     direction = 1
   }
 }
-
-
-
 
 
 document.addEventListener("keydown", control)
